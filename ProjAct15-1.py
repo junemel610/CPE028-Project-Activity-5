@@ -1,5 +1,4 @@
 from ncclient import manager
-from xml.etree import ElementTree as ET
 import requests
 import xml.dom.minidom
 
@@ -53,7 +52,6 @@ def set_motd_banner(connection, motd):
     connection.edit_config(target="running", config=netconf_motd)
     print("MOTD banner set.")
 
-
 def send_webex_teams_notification(token, room_id, message):
     headers = {'Authorization': f'Bearer {token}'}
     data = {'roomId': room_id, 'text': message}
@@ -80,12 +78,12 @@ if __name__ == "__main__":
         secure_privileged_exec(m, secretpass)
 
         # Set MOTD banner
-        motd_banner = "Unauthorized Access is Prohibited!"
+        motd_banner = "%NEBULA%"
         set_motd_banner(m, motd_banner)
 
         # Send WebEx Teams notification
-        webex_teams_token = 'YWIwYzA4ZjItYzdmOC00ZTY1LWI0ZWQtMDQyZDRlYjE5M2ZmMTI0YWI5NTgtMTM2_P0A1_18f592ad-9e27-4e21-bdda-c79873a7f7cd'
-        room_id = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vY2ZmMGFlMTAtOWU2MC0xMWVlLWJlMmMtNGQ1ZWNkNTFiMGVj'
+        webex_teams_token = 'MzY5YWU3YWItNDVhYS00OGMxLTkzNzgtMzQzNjAzN2U1NGQxZWRmNDI0MDUtOWU2_P0A1_9b633d90-e2cf-4f17-aff5-a1af2e006532'
+        room_id = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMTE3NzBmZjAtM2NhNS0xMWVlLTgxMzItYjkzYzJjZDA2ZWEx'
         message = (
             f"Configuration update:\n"
             f"Hostname: {new_hostname}\n"

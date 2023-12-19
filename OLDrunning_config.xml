@@ -1,15 +1,10 @@
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:0fb19618-cea8-4fbf-9dcd-2c89790cb581">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:984399c1-446f-4cd5-8296-a7826cb11493">
 	<data>
 		<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
 			<version>16.9</version>
 			<boot-start-marker/>
 			<boot-end-marker/>
-			<banner>
-				<motd>
-					<banner>%NEBULA%</banner>
-				</motd>
-			</banner>
 			<service>
 				<timestamps>
 					<debug>
@@ -29,12 +24,7 @@
 					<output>virtual</output>
 				</console>
 			</platform>
-			<hostname>TeamNebula</hostname>
-			<enable>
-				<password>
-					<secret>password123</secret>
-				</password>
-			</enable>
+			<hostname>CSR1kv</hostname>
 			<username>
 				<name>cisco</name>
 				<privilege>15</privilege>
