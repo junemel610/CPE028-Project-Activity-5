@@ -77,7 +77,7 @@ if __name__ == "__main__":
         secretpass = "password123"
         secure_privileged_exec(m, secretpass)
 
-        # Set MOTD banner.
+        # Set MOTD banner
         motd_banner = "%NEBULA%"
         set_motd_banner(m, motd_banner)
 
